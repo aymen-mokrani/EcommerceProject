@@ -1,0 +1,8 @@
+docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=19971997 -d postgres
+
+psql -h localhost -U postgres 
+
+docker exec -it 'container_id' psql -U postgres
+
+docker stop some-postgres 
+docker start some-postgres 
