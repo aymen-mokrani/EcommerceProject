@@ -1,13 +1,17 @@
 import psycopg2
-from dotenv import dotenv_values
+from dotenv import load_dotenv
+import os
 
+def init_connection() :
+    load_dotenv(".env")
 
-config = dotenv_values(".env")
+    con = psycopg2.connect(
+        user=os.environ["MYUSER"],
+        host=os.environ["HOST"],
+        dbname=os.environ["DATABASE"],
+        password=os.environ["PASSWORD"],
+        port=os.environ["PORT"]
+    )
 
-con = psycopg2.connect(
-    user=config["USER"],
-    host=config["HOST"],
-    dbname=config["DATABASE"],
-    password=config["PASSWORD"],
-    port=config["PORT"]
-)
+    return con
+

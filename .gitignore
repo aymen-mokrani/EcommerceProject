@@ -1,0 +1,16 @@
+*.env
+createdata.py 
+config.py
+.idea/
+.vscode/
+*.pyc
+*.pyo
+__pycache__/
+/env/
+/logs/
+/tmp/
+/lib/
+/libs/
+/lib64/
+/bin/
+/.ruff_cashe/

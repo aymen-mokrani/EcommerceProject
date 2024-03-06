@@ -1,13 +1,5 @@
-from typing import TYPE_CHECKING, List
 import fastapi as _fastapi
-import sqlalchemy.orm as _orm
 
-
-import schemas as _schemas
-import services as _services
-
-if TYPE_CHECKING:
-    from sqlalchemy.orm import Session
 
 app = _fastapi.FastAPI()
 
