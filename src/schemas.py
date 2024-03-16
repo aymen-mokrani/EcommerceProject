@@ -54,7 +54,7 @@ class _size(BaseModel):
     size : str = Field(min_length=1, max_length=10)
 
 class _Stock_quantity(BaseModel):
-    quantity : int = Field(max_length=100)
+    quantity : int = Field(le=1000000)
     created_at : datetime = Field(default_factory=datetime.now)
     modified_at : datetime 
     deleted_at : datetime 
